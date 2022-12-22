@@ -11,7 +11,7 @@ $(function () {
     });
 
 
-    $('#main_video').YTPlayer({
+    $('.main_video').YTPlayer({
         videoURL: 'https://youtu.be/11KwsRh9XHk?list=PLi_dgkvr6Fr5wxUEq-JpMh3RSPBtH5PrK',
         containment: '.video_wrap',
         autoPlay: true,
@@ -24,11 +24,11 @@ $(function () {
 
 
     var conP = $('.main_con_left_inner').offset().top;
-    console.log(conP);
+    // console.log(conP);
 
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
-        console.log(sct, conP);
+        // console.log(sct, conP);
         if (sct > conP - 700) {
             $('.main_con_left_inner').addClass('on')
         } else {
@@ -39,7 +39,7 @@ $(function () {
 
 
     var conP02 = $('.main_ed_center').offset().top;
-    console.log(conP02);
+    // console.log(conP02);
 
     $(window).on('scroll', function () {
         var sct02 = $(window).scrollTop();
@@ -55,7 +55,6 @@ $(function () {
 
     // mainSlide
     $('.main_slide').slick({
-        // slidesToShow: 2,
         arrows: true,
         dots: false,
         autoplay: true,
