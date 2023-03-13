@@ -10,7 +10,6 @@ $(function () {
 
     });
 
-
     $('.main_video').YTPlayer({
         videoURL: 'https://youtu.be/11KwsRh9XHk?list=PLi_dgkvr6Fr5wxUEq-JpMh3RSPBtH5PrK',
         containment: '.video_wrap',
@@ -22,13 +21,11 @@ $(function () {
         playOnlyIfVisible: true,
     });
 
-
     var conP = $('.main_con_left_inner').offset().top;
-    console.log(conP);
-
+    // console.log(conP);
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
-        console.log(sct, conP);
+        // console.log(sct, conP);
         if (sct > conP - 700) {
             $('.main_con_left_inner').addClass('on')
         } else {
@@ -38,30 +35,43 @@ $(function () {
 
 
 
-    var conP02 = $('.main_ed_center').offset().top;
-    console.log(conP02);
 
-    $(window).on('scroll', function () {
-        var sct02 = $(window).scrollTop();
-        // console.log(sct, conP);
-        if (sct02 > conP02 - 2000) {
-            $('.main_ed_center').addClass('on')
-        } else {
-            $('.main_ed_center').removeClass('on')
-        }
-    });
-
-
+    // var conP03 = $('.main_slide').offset().top;
+    // console.log(conP03);
+    // $(window).on('scroll', function () {
+    //     var sct03 = $(window).scrollTop();
+    //     // console.log(sct, conP);
+    //     if (sct03 > conP03 - 4000) {
+    //         $('.main_slide').slick('slickPlay')
+    //     } else {
+    //         $('.main_slide').slick('slickPause')
+    //     }
+    // });
 
     $('.main_slide').slick({
-        // slidesToShow: 2,
         arrows: true,
         dots: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         pauseOnHover: false,
         pauseOnFocus: false,
     });
+
+   
+
+    // var conP02 = $('.main_ed_center').offset().top;
+    // console.log(conP02);
+
+    // $(window).on('scroll', function () {
+    //     var sct02 = $(window).scrollTop();
+    //     // console.log(sct, conP);
+    //     if (sct02 > conP02 - 2000) {
+    //         $('.main_ed_center').addClass('on')
+    //     } else {
+    //         $('.main_ed_center').removeClass('on')
+    //     }
+    // });
+
 
 
 
@@ -78,11 +88,12 @@ $(function () {
 
 
 
+
     $('.main_noti_list').slick({
         // slidesToShow: 2,
         arrows: false,
         dots: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         vertical: true,
         pauseOnHover: false,
@@ -99,5 +110,5 @@ $(function () {
 
 
 
-
+    AOS.init();
 })
